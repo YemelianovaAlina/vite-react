@@ -1,6 +1,5 @@
 module.exports = {
   plugin: {
-    ['postcss-nested']: {
-    }
-  }
-}
+    ['postcss-nested']: {},
+  },
+};
