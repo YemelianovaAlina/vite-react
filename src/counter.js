@@ -1,3 +1,5 @@
+import { addBanner } from './banner.js';
+
 export const initializeCounter = (doc = globalThis.document) => {
   const countElement = doc.getElementById('count');
   const incrementButton = doc.getElementById('increment');
@@ -7,6 +9,12 @@ export const initializeCounter = (doc = globalThis.document) => {
 
   const render = () => {
     countElement.textContent = count;
+
+    if (count < 0) {
+      import('./banner.js').then(({ addBanner }) => {
+        addBanner('The counter is negative!');
+      });
+    }
   };
 
   const increment = () => {
