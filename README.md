@@ -191,7 +191,7 @@ Let's start with the most boring, but straight forward of the bunch. Add the fol
 In `counter.js`, we can import a stylesheet.
 
 ```js
-import './counter.css';
+import './counter.module.css';
 ```
 
 In both cases, the CSS is loaded globally. The notable difference here is that this CSS file will only be loaded when this module is loaded.
