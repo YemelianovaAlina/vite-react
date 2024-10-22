@@ -161,7 +161,7 @@ const render = () => {
   countElement.textContent = count;
 
   if (count < 0) {
-    import('./add-banner.js').then(({ addBanner }) => {
+    import('./add-banner.ts').then(({ addBanner }) => {
       addBanner('The counter is negative!');
     });
   }
