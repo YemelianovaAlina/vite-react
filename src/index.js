@@ -9,10 +9,23 @@ console.log(import.meta.env);
 
 console.log(image);
 
+const content = document.querySelector('#content');
+
+for (let [path, module] of Object.entries(
+  import.meta.glob('./logos/**/**.svg'),
+)) {
+  module().then((url) => {
+    const img = document.createElement('img');
+    img.src = url.default;
+    img.height = 200;
+    content.appendChild(img);
+  });
+}
+
 const img = document.createElement('img');
 img.src = image;
 
-document.querySelector('#content').appendChild(img);
+content.appendChild(img);
 import('./counter').then(({ initializeCounter }) => {
   initializeCounter();
 });
