@@ -161,7 +161,7 @@ const render = () => {
   countElement.textContent = count;
 
   if (count < 0) {
-    import('./add-banner.ts').then(({ addBanner }) => {
+    import('./add-banner.js').then(({ addBanner }) => {
       addBanner('The counter is negative!');
     });
   }
@@ -276,7 +276,7 @@ Just change the file extension to `.ts`. That's it.
 
 ## Using TypeScript with CSS Modules
 
-With a few minor changes, `add-banner.ts` works as expected. But, TypeScript is annoyed by the CSS module and the fact that it doesn't know it's type.
+With a few minor changes, `add-banner.js` works as expected. But, TypeScript is annoyed by the CSS module and the fact that it doesn't know it's type.
 
 We're going to solve for this by using a little library called `typed-css-modules`.
 

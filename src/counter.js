@@ -14,7 +14,7 @@ export const initializeCounter = (doc = globalThis.document) => {
     countElement.textContent = count;
 
     if (count < 0) {
-      import('./banner.ts').then(({ addBanner }) => {
+      import('./banner.js').then(({ addBanner }) => {
         addBanner('The counter is negative!');
       });
     }
