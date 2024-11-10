@@ -2,6 +2,8 @@ import { initializeCounter } from './counter.js';
 // import image from './favicon-16x16.png';
 import image from './steve-after-a-workshop.jpg?h=400&format=webp';
 
+console.log(import.meta.env);
+
 console.log(image);
 
 const img = document.createElement('img');
